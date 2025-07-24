@@ -1,0 +1,102 @@
+Comando basicos
+
+	git config --global init.defaultBranch main
+
+	git branch -m main renombrar la rama
+
+	git config --global user.name "Nombre usuario"
+
+	git config --global user.email "Coreo@correo.com"
+
+	git confing --list
+
+	git status
+
+	git add nombreArchivo
+
+	git rm --catched nombreArchivo
+
+	git add .
+
+	Git log -> Bitacora de cambios
+
+
+Manejo de Ramas
+	
+	Ver el listado de rams
+		git branch
+	
+	Crear una rama nueva
+		git checkout -b amin
+	
+	Cambio entre Ramas
+		git checkout main 
+		git switch main
+		
+	Fusionar ramas
+		*Primero debemos posisionarnos en la rama principal y en el siguiente comando indicar la rama que queremos fusionar
+		git merge nombreRamaAFusionar
+		
+	Eliminar una rama	
+		git branch -D NombreRama
+	
+	
+	git revert "hash del commit": Crea un nuevo commit que deshace los cambios de un commit específico. Es útil para deshacer cambios de forma segura en repositorios compartidos.
+	
+	git reset --soft: Mueve HEAD al commit especificado, pero mantiene los cambios en el área de preparación.
+	git reset --mixed: (Por defecto) Mueve HEAD y deshace los cambios en el área de preparación, pero mantiene los cambios en el directorio de trabajo.
+	git reset --hard: Mueve HEAD y descarta todos los cambios, tanto en el área de preparación como en el directorio de trabajo.
+	
+	
+Git Tag
+	Permite poner una etiqueta indicadora
+		ejemplo: git tag -a v1.0 -m "Primera versión".
+	
+	git tag -> permite ver la lista tags (etiquetas)
+
+	git show "Tag" -> muestra mas información de la etiqueta.
+	
+	git tag -d "tag" -> Elina la etiqueta de los commits, sin alterar los commits
+	
+	
+	
+git checkout "Hash del commit"
+	Tambien te permite evaluar el status de una rama antes de integrarlo.
+	
+
+Resolución de conflcitos
+	Se crea archivo en main
+	se crea rama developer
+		se crea linea y se hace commit
+	se regresa a la rama min
+		se modifica la misma linea y se hace commit
+	se hace merge con la nueva rama
+		si se marco el conflicto se abre el archivo y se corrige
+		Se hace commit y se intenta de nuevo el merge
+
+
+Forks y Estrellas
+	
+Comandos para github
+	
+	git push
+		Sube los cambios al repositorio Remoto (GitHub).
+	
+	git pull
+		Baja cambios de la Rama de Origen.
+		* No puedes hacer un Push si tu rama local no esta sincronizada con el Repositorio Remoto.
+	
+	
+	
+	git fetch
+		Baja los cambios pero no los integra de inmediato al repositorio local.
+		Si confirmamos que los cambios son correctos procedemos a hacer un git merge origin/{Rama}
+		
+		
+ Issues en GitHub
+	Deinier una plantilla:
+		crear esta estructura de carpetas:.github\ISSUE_TEMPLATE
+			agregar el archivo bug_report.md
+				Dentro del archivo podemos configurar la plantilla.
+
+Code Review
