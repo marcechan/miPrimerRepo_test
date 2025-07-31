@@ -39,6 +39,8 @@ Manejo de Ramas
 		
 	Eliminar una rama	
 		git branch -D NombreRama
+		Nota: antes de eliminar la rama verifica que ya estes en otra, de lo contrario dara un error.
+		
 	
 	
 	git revert "hash del commit": Crea un nuevo commit que deshace los cambios de un commit específico. Es útil para deshacer cambios de forma segura en repositorios compartidos.
@@ -90,13 +92,40 @@ Comandos para github
 	
 	git fetch
 		Baja los cambios pero no los integra de inmediato al repositorio local.
-		Si confirmamos que los cambios son correctos procedemos a hacer un git merge origin/{Rama}
+		con este comando podemos ver comparar la rama local con la remota.
+			git log {RamaLocla}..origin/{RamaRemota}
+		Si confirmamos que los cambios son correctos procedemos a hacer un git merge origin/{RamaRemota}
 		
 		
  Issues en GitHub
 	Deinier una plantilla:
-		crear esta estructura de carpetas:.github\ISSUE_TEMPLATE
+		crear esta estructura de carpetas:(.github\ISSUE_TEMPLATE)
 			agregar el archivo bug_report.md
 				Dentro del archivo podemos configurar la plantilla.
 
-Code Review
+	Nota: El titulo y la descripción son los datos mas importantes de una Issue.
+	
+	
+CodeReview
+	El primer paso es verificiar que tengamos actualizado la rama local
+	Seguidamente crear una rama secundaria donde haremos los cambios.
+	
+	Al finalizar debemos hacer subir los cambios a github con el siguiente comando:
+	git push -u origin developer_01
+
+	En github debemos crear el pull request y esperar que nuestros compañeros validen.
+	
+
+GitHub Projects
+	Crear un proyecto segun las necesidades, existen muchas plantillas
+	Crear la actividad (Add Item, esto normalmente se hace en la sección de ToDo.) y asignarla a algun colaborador, 
+	Normalamente tendra la leyenda draft esto quiere decir que no esta vinculado a ningun repositorio
+	Para corregir esto debemos posisionarnos sobre la actividad dar click a los tres puntos y elegir, convertirla en issue, en este paso nos permitira asignat el repo.
+	
+	Si creamos el pull request desde la issue, debemmos ejecutar los siguientes comandos en local:
+	git fetch origin
+	git checkout {Nombre de la rama que creamos en github}mchan/8
+	
+	Nota:
+	GitHub project te permite trabajar con varios repositorios simultaneamente.
+	
