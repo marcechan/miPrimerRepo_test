@@ -1,0 +1,1 @@
+se crea un archivo de txt que en realidad debe ser un css
