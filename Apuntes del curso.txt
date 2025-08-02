@@ -129,3 +129,44 @@ GitHub Projects
 	Nota:
 	GitHub project te permite trabajar con varios repositorios simultaneamente.
 	
+	
+Uso de GitHub Gist para Compartir y Revisar Código Colaborativo
+
+
+
+Creación y Publicación de Sitios Web con GitHub Pages
+
+
+
+Creación y Gestión de GitHub Codespaces en la Nube
+
+
+
+Programación Colaborativa con Live Share en VS Code
+
+
+
+Gestión de GitHub Tokens para Acceso Seguro a Repositorios
+
+
+
+Mitigación de Brechas de Seguridad en Repositorios GitHub
+	Secret scanning: scannea que no se suba información delicada como accesos a apis o base de datos.
+	esto alertara en github cuando subamos este tipo de datos por error.
+	
+	utilizar git ignore para evitar subir información delicada.
+	
+	
+Gestión de Seguridad de Paquetes con Dependabot en Proyectos .NET
+	Se debe habilitat en settings
+	
+	
+Configuración de Repositorios Privados en GitHub
+	Git ignore
+		*.sln	-> Archivos de proyecto
+		/bin	-> carpeta
+		/obj	-> carpeta
+		
+	en git hay un proyecto que se llama git ignore y hay ejemplo de diferentes proyectos
+	
+		
