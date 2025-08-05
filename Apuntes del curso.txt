@@ -169,4 +169,9 @@ Configuración de Repositorios Privados en GitHub
 		
 	en git hay un proyecto que se llama git ignore y hay ejemplo de diferentes proyectos
 	
-		
+
+Creación y gestión de repositorios en GitHub
+	Crear una organización
+	Agregar los colaboradores
+	En settings debemos completar la información necesaria.
+	
